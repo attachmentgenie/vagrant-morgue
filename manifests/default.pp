@@ -42,9 +42,9 @@ mysql::db { 'morgue':
 }
 
 class { 'php':
-  extensions => { 'pdo' => {}, 'mysql' => {}},
+  extensions => { 'pdo' => {}, 'mysql' => {}, 'mbstring' => {}},
   fpm        => false,
-  settings   => { 'Date/date.timezone' => 'Europe/Amsterdam'},
+  settings   => { 'date.timezone' => 'Europe/Amsterdam'},
   notify     => Class['apache::service'],
 }
 
