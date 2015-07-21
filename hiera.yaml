@@ -1,0 +1,8 @@
+---
+:backends:
+  - yaml
+:hierarchy:
+  - "node/%{::hostname}"
+  - "environment/%{::environment}"
+  - "osfamily/%{::osfamily}"
+  - "common"
